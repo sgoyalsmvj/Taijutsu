@@ -4,7 +4,8 @@ class Sprite {
     imageSrc,
     scale = 1,
     framesMax = 1,
-    offset={x:0,y:0}
+    offset={x:0,y:0},
+    sprites
   }) {
     this.position = position;
     this.width = 50;
@@ -58,7 +59,7 @@ class Fighter extends Sprite {
     position,
     velocity,
     color,
-    
+    sprites,
     imageSrc,
     scale = 1,
     framesMax = 1,
@@ -92,6 +93,7 @@ class Fighter extends Sprite {
     this.framesCurrent = 0;
     this.framesElasped =0;
     this.framesHold = 5;
+    this.sprites= sprites;
   }
 
   update() {
